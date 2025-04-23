@@ -1,0 +1,15 @@
+# Kafka consumer configuration
+kafka.bootstrap.servers=localhost:9092
+kafka.group.id=batch-processor-group
+kafka.auto.offset.reset=earliest
+kafka.max.poll.interval.ms=300000
+
+# Processor configuration
+processor.batchSize=1000
+processor.numWorkerThreads=10
+processor.batchTimeoutSeconds=60
+processor.topics=input-topic
+
+# Kinesis configuration
+kinesis.stream.name=output-stream
+kinesis.region=us-east-1
